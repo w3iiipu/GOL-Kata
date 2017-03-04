@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Random;
 
 public class Main {
@@ -11,16 +12,18 @@ public class Main {
 
     public static void main(String[] args) {
 
-gameBoard();
+
     }
 
-    public static void gameBoard (){
-        // initialized grid size
-        int col = 4;
-        int row = 4;
+    // initialized grid size
+    int col = 4;
+    int row = 4;
 
-        // create 2d array
-       boolean [][] board =  new boolean[col][row];
+    // create 2d array
+    boolean [][] board =  new boolean[col][row];
+
+    public void gameBoard (){
+
         // random generator for state
         Random rand = new Random();
         // populating the array with random state of 0 or 1
@@ -36,8 +39,24 @@ gameBoard();
             }
             System.out.println();
         }
-//        System.out.printf("%5b ", Arrays.deepToString(board).replace("true", "O".replace("false", "X") ));
+//        System.out.printf("%5b ", Arrays.deepToString(board[i]).replace("true", "O".replace("false", "X") ));
 //        System.out.println(Arrays.deepToString(board));
+    }
+
+//    Method that go through array cell by cell
+    public boolean checkCell(){
+        boolean state;
+
+        // loop to check cell
+        for (int i = 0; i <= board.length-1; i++){
+            for (int j = 0; j <= board.length-1; j++){
+               // loop to check surrounding of particular cell
+            }
+        }
+        // apply neighbours()
+        // update next generation with new array
+
+        return state;
     }
 
 //    Original TDD method replaced by new method for visibility
